@@ -1,14 +1,13 @@
-// //find
+//find
 
-// let listagem = [5, 3, 'Lucas', 13, 15, 'Thamires']
+let listagem = [5, 3, 'Lucas', 13, 15, 'Thamires']
 
-// let busca = listagem.find((item)=>{
-//     if(item==='Lucas') {
-//         return console.log('item encontrado')
-//     }
-// })
+let busca = listagem.find((item)=>{
+    if(item==='Lucas') {
+        return console.log('item encontrado')
+    }
+})
 
-// console.log(busca)  
 
 //filter
 
