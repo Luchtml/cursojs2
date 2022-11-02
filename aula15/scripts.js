@@ -17,5 +17,9 @@ Pessoa.prototype.nadar = function(){
 }
 
 const lucas = new Pessoa('Lucas', 26)
-console.log(Pessoa.prototype)
-console.log(lucas.prototype)
+// console.log(Pessoa.prototype)
+// console.log(lucas.prototype)
+
+
+const pais = 'Brasil'
+const cidade = new String('Rio')
