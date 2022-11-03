@@ -1,12 +1,19 @@
-function Pessoas(nome, idade, sobrenome) {
+function Pessoa(nome, sobrenome, idade) {
     this.nome = nome
-    this.idade = idade 
     this.sobrenome = sobrenome
+    this.idade = idade
 }
 
-Pessoas.prototype.nomeCompleto = function () {
+const lucas = new Pessoa('Lucas', 'Costa', 26)
+
+Pessoa.prototype.nomeCompleto = function() {
     return `${this.nome} ${this.sobrenome}`
 }
-const lucas = new Pessoas('Lucas', 26, 'Costa')
 
 
+
+
+
+Object.getOwnPropertyNames(NodeList.prototype)
+Object.getOwnPropertyNames(HTMLCollection.prototype)
+Object.getOwnPropertyNames(Document.prototype)
