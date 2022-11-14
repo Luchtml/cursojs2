@@ -116,7 +116,7 @@
             </section>
             <section class="grid-section contato" data-anime="scroll" id="contato">
                 <h1 class="titulo">Contato</h1>
-                <div class="mapa">
+                <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento">
                     <img src="img/mapa.png" alt="mapa">
                 </div>
                 <ul class="dados">
@@ -136,9 +136,9 @@
                 <button data-modal="fechar" class="fechar">X</button>
                 <form>
                     <label for="email">Email</label>
-                    <input type="text" for="email" id="email">
+                    <input type="text" for="email" id="email" autocomplete="username">
                     <label for="senha">Senha</label>
-                    <input type="password" for="senha" id="senha">
+                    <input type="password" for="senha" id="senha" autocomplete="current-password">
                     <button type="submit">Entrar</button>
                 </form>
             </div>
