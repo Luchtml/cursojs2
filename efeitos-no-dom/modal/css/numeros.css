@@ -10,3 +10,7 @@
     font-family: 'Playfair Display SC';
     margin-bottom: .5rem;
 }
+
+.numeros-grid span {
+    font-family: 'IBM Plex Mono', monospace;
+}
