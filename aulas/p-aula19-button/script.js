@@ -44,6 +44,9 @@ function handleChange(event) {
     showCss()
 }
 
+
+console.log(localStorage.nome)
+
 function showCss() {
     cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>')
 
