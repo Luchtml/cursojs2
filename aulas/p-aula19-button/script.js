@@ -41,11 +41,21 @@ function handleChange(event) {
     btn.style.backgroundColor = value
 
     handleStyle[name](value)
+    saveValues(name, value)
     showCss()
 }
 
 
-console.log(localStorage.nome)
+function saveValues(name, value){
+    localStorage[name] = value
+}
+
+function setValues(){
+    const properties = Object.keys(localStorage)
+    console.log(properties)
+}
+
+setValues()
 
 function showCss() {
     cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>')
