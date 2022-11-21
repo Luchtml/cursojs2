@@ -1,11 +1,14 @@
-const estilo = fetch('./style.css')
+const sobre = fetch('./sobre.html')
+
+const div = document.createElement('div')
 
 
-estilo.then(resolucao => {
+
+sobre.then(resolucao => {
     return resolucao.text()
 }).then((body) => {
-    const conteudo = document.querySelector('.conteudo')
-    const style = document.createElement('style')
-    style.innerHTML = body
-    conteudo.appendChild(style) 
+    div.innerHTML = body
+    const titulo = div.querySelector('h1')
+    document.querySelector('h1').innerText = titulo.innerText
+    console.log(titulo)
 })
