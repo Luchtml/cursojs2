@@ -8,6 +8,7 @@ import initToolTip from './modules/tooltip.js'
 import initMenuMobile from './modules/menu-mobile.js'
 import initFuncionamento from './modules/funcionamento.js'
 import initFetchAnimais from './modules/fetchanimais.js'
+import initFetchBitcoin from './modules/fech-bitcoin.js'
 
 initModal()
 initScrollSuave()
@@ -19,3 +20,4 @@ initDropdownMenu()
 initMenuMobile()
 initFuncionamento()
 initFetchAnimais()
+initFetchBitcoin()
