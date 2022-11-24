@@ -31,6 +31,7 @@ function $$(selectedElements){
     return this
 
   }
+  
   function removeClass(className) {
     elements.forEach((element) => {
       element.classList.remove(className)
@@ -57,7 +58,6 @@ console.log(btns.hide().show())
 function handleClick(event) {
   console.log(event.target)
   btns.addClass('active')
-
 }
 
 btns.on('click', handleClick)
