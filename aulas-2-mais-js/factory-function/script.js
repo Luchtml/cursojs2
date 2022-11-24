@@ -1,65 +1,63 @@
-// function createButton(text){
+function $$(selectedElements){
+  const elements = document.querySelectorAll(selectedElements)
 
-//     const numeroSecreto = 'j2342mn4324çasd'
+  function hide(){
+    elements.forEach(element => {
+      element.style.display = 'none'
+    })
+    return this
+  }
 
-//     function element() {
-//         const btnElement = document.createElement('button')
-//         btnElement.innerText = text
-//         return btnElement
-//     }
+  function show(){
+    elements.forEach(element => {
+      element.style.display = 'initial'
+    })
+    return this
+  }
 
-//     return{
-//         text,
-//         element,
-//         numeroSecreto,
-//     }
-// }
+  function on(onEvent, callback) {
+    elements.forEach((element) => {
+      element.addEventListener(onEvent, callback)
+    })
+    return this
 
-// const btnComprar = createButton('Comprar')
-// const btnVender = createButton('Vender')
+  }
 
-// console.log(btnComprar, btnVender)
+  function addClass(className) {
+    elements.forEach((element) => {
+      element.classList.add(className)
+      
+    })
+    return this
 
+  }
+  function removeClass(className) {
+    elements.forEach((element) => {
+      element.classList.remove(className)
+      
+    })
+    return this
 
+  }
 
-///////////////////////////////////////////////////////////
-
-// function createButton(text){
-
-
-//     function element() {
-//         const btnElement = document.createElement('button')
-//         btnElement.innerText = text
-//         return btnElement
-//     }
-
-//     return Object.freeze({
-//         text,
-//         element,
-//     })
-// }
-
-// const btnComprar = createButton('Comprar')
-// const btnVender = createButton('Vender')
-
-// btnComprar.text = 'Novo Texto'
-// btnComprar.element = 'Novo Texto'
-
-// console.log(btnComprar, btnVender)
-
-function Pessoa(nome) {
-    // if(!(this instanceof Pessoa))
-    //forma nova do ES6
-    if(!new.target)
-        return new Pessoa(nome)
-    
-   this.nome = nome
+  return {
+    elements,
+    hide,
+    show,
+    on,
+    addClass,
+    removeClass,
+  }
 }
 
-Pessoa.prototype.andar = () => {
-  return `${this.nome} andou`
+const btns = $$('button')
+
+console.log(btns.hide().show())
+
+function handleClick(event) {
+  console.log(event.target)
+  btns.addClass('active')
+
 }
 
-const designer = Pessoa('Lucas')
-
-console.log(designer)
+btns.on('click', handleClick)
