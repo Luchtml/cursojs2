@@ -1,63 +1,38 @@
-function $$(selectedElements){
-  const elements = document.querySelectorAll(selectedElements)
+function solucao(notaMinima,totalDeVagas,notasDoVestibular) {
+	//seu codigo aqui
 
-  function hide(){
-    elements.forEach(element => {
-      element.style.display = 'none'
-    })
-    return this
-  }
+	let canditadosAceitos = []
+	for (const nota of notasDoVestibular){
+		if(!nota < notaMinima) {
+			canditadosAceitos.push(nota)
+		}
+	}
 
-  function show(){
-    elements.forEach(element => {
-      element.style.display = 'initial'
-    })
-    return this
-  }
+	let aMenorNota
 
-  function on(onEvent, callback) {
-    elements.forEach((element) => {
-      element.addEventListener(onEvent, callback)
-    })
-    return this
+	if(canditadosAceitos.length > totalDeVagas){
+		for (const notaVerificada of canditadosAceitos) {
+			if (aMenorNota === undefined) {
+				aMenorNota = notaVerificada;
+				canditadosAceitos.sort()
+		} else {
+			if (notaVerificada < aMenorNota)
+				aMenorNota = notaVerificada;
+				canditadosAceitos.shift()
+			}
+		}
+	 }
+	 console.log(canditadosAceitos)
+	}
 
-  }
+	
 
-  function addClass(className) {
-    elements.forEach((element) => {
-      element.classList.add(className)
-      
-    })
-    return this
-
-  }
-  
-  function removeClass(className) {
-    elements.forEach((element) => {
-      element.classList.remove(className)
-      
-    })
-    return this
-
-  }
-
-  return {
-    elements,
-    hide,
-    show,
-    on,
-    addClass,
-    removeClass,
-  }
+function naoMexer(input) {
+	const array = input.split("\n");
+	const notaMinima = Number(array[0]);
+	const totalDeVagas = Number(array[1]);
+	const notasDoVestibular = array[2].trim().split(" ").map(x => Number(x));
+	solucao(notaMinima,totalDeVagas,notasDoVestibular);
 }
-
-const btns = $$('button')
-
-console.log(btns.hide().show())
-
-function handleClick(event) {
-  console.log(event.target)
-  btns.addClass('active')
-}
-
-btns.on('click', handleClick)
+let input = require('fs').readFileSync('/dev/stdin','utf8');
+naoMexer(input);
