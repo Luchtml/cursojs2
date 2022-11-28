@@ -1,4 +1,3 @@
-@ -1,63 +1,38 @@
 function $$(selectedElements){
   const elements = document.querySelectorAll(selectedElements)
 
@@ -59,3 +58,6 @@ console.log(btns.hide().show())
 function handleClick(event) {
   console.log(event.target)
   btns.addClass('active')
+}
+
+btns.on('click', handleClick)
