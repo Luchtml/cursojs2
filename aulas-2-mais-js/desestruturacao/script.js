@@ -25,23 +25,35 @@
 // Desestruturação aninhada 
 
 
-const cliente = {
-    nome: 'Andre',
-    compras: {
-        digitais: {
-            livros: ['Livro 1', 'Livro 2'],
-            videos: ['Video JS', 'Video HTML']
-        },
-        fisicas: {
-            cadernos: ['Caderno 1']
-        }
-    }
-}
+// const cliente = {
+//     nome: 'Andre',
+//     compras: {
+//         digitais: {
+//             livros: ['Livro 1', 'Livro 2'],
+//             videos: ['Video JS', 'Video HTML']
+//         },
+//         fisicas: {
+//             cadernos: ['Caderno 1']
+//         }
+//     }
+// }
 
 
-// DESSA FORMA FAZEMOS UMA DESESTRUTURAÇÃO ANINHADA
+// // DESSA FORMA FAZEMOS UMA DESESTRUTURAÇÃO ANINHADA
 
-const {digitais, fisicas, digitais: {livros, videos}} = cliente.compras
+// const {digitais, fisicas, digitais: {livros, videos}} = cliente.compras
 
 
-console.log(digitais)
+// console.log(digitais)
+
+// OBJETOS////////////////////////////////////////////////////
+
+
+
+// -> ARRAYS////////////////////////////////////////////////
+
+const frutas = ['Banana', 'Uva', 'Morango']
+
+const [primeira, segunda, terceira] = frutas
+
+console.log(terceira)
