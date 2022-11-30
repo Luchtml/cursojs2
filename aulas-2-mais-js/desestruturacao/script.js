@@ -1,59 +1,16 @@
-// const cliente = {
-//     nome: 'Andre',
-//     compras: {
-//         digitais: {
-//             livros: ['Livro 1', 'Livro 2'],
-//             videos: ['Video JS', 'Video HTML']
-//         },
-//         fisicas: {
-//             cadernos: ['Caderno 1']
-//         }
-//     }
-// }
+//Extraia o backgroundColor e margin do btn
+const btn = document.querySelector("button");
+const btnStyles = getComputedStyle(btn);
 
-// const {livros, videos} = cliente.compras.digitais
-// const {nome} = cliente
+const { backgroundColor, margin, color } = btnStyles;
 
-// // const livros = 'TESTE'  [ERRO]
+console.log(backgroundColor, margin, color);
 
-// console.log(livros, videos)
-// console.log(nome)
-// ////////////////////////////////////////////////////////////
+//Trocar o valor das variaveis entre si
 
+let cursoAtivo = "JavaScript";
+let cursoInativo = "HTML";
 
+[cursoAtivo, cursoInativo] = [cursoInativo, cursoAtivo];
 
-// Desestruturação aninhada 
-
-
-// const cliente = {
-//     nome: 'Andre',
-//     compras: {
-//         digitais: {
-//             livros: ['Livro 1', 'Livro 2'],
-//             videos: ['Video JS', 'Video HTML']
-//         },
-//         fisicas: {
-//             cadernos: ['Caderno 1']
-//         }
-//     }
-// }
-
-
-// // DESSA FORMA FAZEMOS UMA DESESTRUTURAÇÃO ANINHADA
-
-// const {digitais, fisicas, digitais: {livros, videos}} = cliente.compras
-
-
-// console.log(digitais)
-
-// OBJETOS////////////////////////////////////////////////////
-
-
-
-// -> ARRAYS////////////////////////////////////////////////
-
-const frutas = ['Banana', 'Uva', 'Morango']
-
-const [primeira, segunda, terceira] = frutas
-
-console.log(terceira)
+console.log(cursoAtivo, cursoInativo);
