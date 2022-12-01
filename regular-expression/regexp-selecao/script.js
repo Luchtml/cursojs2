@@ -1,7 +1,9 @@
-const frase = 'Bavascript'
-const regexp = /J/
-const fraseNova = frase.replace(regexp, 'b')
+const frase = "Bavascript";
+const regexp = /J/;
+const fraseNova = frase.replace(regexp, "b");
 
-console.log(fraseNova)
+console.log(fraseNova);
 
 //site regexr para estudar regex
+
+//Referencia de seleção
