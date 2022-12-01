@@ -1,6 +1,7 @@
-const regexpCEP = /\d{5}[\s-]?\d{3}/g;
-const ceps = ["00000000", "00000-000", "00000 000"];
+const regexp = /\w+[-.]/gi
+const regexp1 = new RegExp('\\d+', 'gi')
 
-for(cep of ceps) {
-    console.log(cep, cep.match(regexpCEP))
-}
+const frase = 'JavaScript Linguagem 101'
+console.log(frase.replace(regexp1, 'X'))
+
+
