@@ -29,3 +29,7 @@ let regexpResult
 while((regexpResult= regexp2.exec(frase2)) !== null) {
     console.log(regexpResult[0])
 }
+
+
+//match()
+//split()
