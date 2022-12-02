@@ -27,5 +27,5 @@ const regexp2 =/\w+/g
 
 let regexpResult
 while((regexpResult= regexp2.exec(frase2)) !== null) {
-    console.log(regexpResult)
+    console.log(regexpResult[0])
 }
