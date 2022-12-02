@@ -17,6 +17,8 @@ while(regexp.test(frase)) {
 
 
 
+////////////////////////////////////////////////////////////////////////
+
 //LOOP COM METODO EXEC()
 
 const frase2 = 'JavaScript, TypeScript, CoffeScript, Java'
