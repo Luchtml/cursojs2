@@ -6,4 +6,3 @@ console.log(fraseNova);
 
 //site regexr para estudar regex
 
-//Referencia de seleção
