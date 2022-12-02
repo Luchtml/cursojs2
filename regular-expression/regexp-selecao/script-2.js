@@ -24,6 +24,6 @@ const frase2 = 'JavaScript, TypeScript, CoffeScript, Java'
 const regexp2 =/\w+/g
 
 let regexpResult
-while((regexpResult= regexp.exec(frase)) !== null) {
+while((regexpResult= regexp2.exec(frase2)) !== null) {
     console.log(regexpResult)
 }
