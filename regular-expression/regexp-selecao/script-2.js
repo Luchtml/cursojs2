@@ -33,3 +33,21 @@ while((regexpResult= regexp2.exec(frase2)) !== null) {
 
 //match()
 //split()
+
+
+
+//replace()
+
+const tags = `
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+`
+
+// const regexp
+//ou regexp ou valor qualquer
+
+const resultado = tags.replace('ul', 'li')
+
+console.log(resultado)
