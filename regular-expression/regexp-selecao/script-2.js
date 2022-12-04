@@ -54,3 +54,24 @@
 // const resultado = tags.replace(regexp, '$& class="ativo"')
 
 // console.log(resultado)
+
+const emails = `empresa@homail.com
+contato@ggmail.com
+suporte@oulook.com
+`
+
+const regexp = /(\w+@)([\w.]+)/g
+
+const resultado = emails.replace(regexp, function(...args){
+    if(args[2] === 'homail.com'){
+        return args[1] + 'hotmail.com.br'
+    } else if(args[2] === 'ggmail.com'){
+        return args[1] + 'gmail.com.br'
+    } else if(args[2] === 'oulook.com'){
+        return args[1] + 'outlook.com.br'
+    } else {
+        return args[0]
+    }
+})
+
+console.log(resultado)
