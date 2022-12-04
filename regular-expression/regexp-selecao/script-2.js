@@ -6,48 +6,51 @@
 
 
 
-//LOOP COM METODO TESTE()
-const regexp = /Java/g
-const frase = 'JavaScript e Java Linguagem 101 Java'
+// //LOOP COM METODO TESTE()
+// const regexp = /Java/g
+// const frase = 'JavaScript e Java Linguagem 101 Java'
 
-let i = 1
-while(regexp.test(frase)) {
-    console.log(i++, regexp.lastIndex)
-}
+// let i = 1
+// while(regexp.test(frase)) {
+//     console.log(i++, regexp.lastIndex)
+// }
 
 
 
-////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////
 
-//LOOP COM METODO EXEC()
+// //LOOP COM METODO EXEC()
 
-const frase2 = 'JavaScript, TypeScript, CoffeScript, Java'
+// const frase2 = 'JavaScript, TypeScript, CoffeScript, Java'
 
-const regexp2 =/\w+/g
+// const regexp2 =/\w+/g
 
-let regexpResult
-while((regexpResult= regexp2.exec(frase2)) !== null) {
-    console.log(regexpResult[0])
-}
+// let regexpResult
+// while((regexpResult= regexp2.exec(frase2)) !== null) {
+//     console.log(regexpResult[0])
+// }
 
 
 //match()
+
 //split()
 
 
 
-//replace()
+///////////////////////////////////// replace()
 
-const tags = `
-<ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-</ul>
-`
+// const tags = `
+// <ul>
+//     <li>Item 1</li>
+//     <li>Item 2</li>
+// </ul>
+// `
 
-// const regexp
-//ou regexp ou valor qualquer
+// // const regexp
+// //ou regexp ou valor qualquer
 
-const resultado = tags.replace('ul', 'li')
+// const regexp = /(?<=<\/?)\w+/g
 
-console.log(resultado)
+// const resultado = tags.replace(regexp, '$& class="ativo"')
+
+// console.log(resultado)
