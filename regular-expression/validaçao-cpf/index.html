@@ -7,7 +7,47 @@
     <title>Validar CPF</title>
 </head>
 <body>
+    <style>
+        label {
+            display: block;
+            font-family: monospace;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
 
-    <script src="script.js"></script>
+        input{
+            width: 100%;
+            padding: 5px;
+            border: 2px solid black;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        input::placeholder{
+            color: rgba(0, 0, 0, .2);
+        }
+        input.erro {
+            border-color: red;
+        }
+        input.valido {
+            border-color: rgb(64, 255, 47);
+        }
+        .erro-text {
+            display: none;
+            background-color: rgba(255, 0, 0, 0.336);
+            font-family: monospace;
+            font-size: .875rem;
+        }
+
+        .erro-text.ativar {
+            display: block;
+        }
+    </style>
+    <form action="">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf" placeholder="***.***.***-**">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+    </form>
+    <script type="module" src="script.js"></script>
 </body>
 </html> 
